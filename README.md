@@ -1,8 +1,3 @@
----
-
-## 📄 `README.md` — Banco de Dados: Cafés Especiais
-
-````markdown
 # ☕ Banco de Dados para Marcenaria & Cafeteria Artesanal
 
 Este projeto contém a modelagem e implementação de um banco de dados relacional utilizando **SQLite**, com foco em produtos e pedidos de cafés especiais artesanais. A ideia surgiu a partir da adaptação de um sistema web para uma marcenaria local que também comercializa cafés e itens especiais.
@@ -47,39 +42,6 @@ Criar um banco de dados relacional com duas tabelas (`produtos` e `pedidos`), qu
 
 ---
 
-## 🧾 Comandos SQL
-
-### Criação das Tabelas + Inserção dos Registros
-
-```sql
--- Tabela de produtos
-CREATE TABLE IF NOT EXISTS produtos (
-  id_produto INTEGER PRIMARY KEY,
-  nome TEXT NOT NULL,
-  preco REAL NOT NULL,
-  estoque INTEGER NOT NULL
-);
-
--- Inserção de produtos (cafés especiais)
-INSERT INTO produtos VALUES (1, 'Café Especial Caramelo 250g', 59.00, 20);
-INSERT INTO produtos VALUES (2, 'Café Especial Microlote Caparaó 250g', 68.00, 15);
-INSERT INTO produtos VALUES (3, 'Café Especial Microlote Biomas Brasileiros 250g', 80.00, 10);
-
--- Tabela de pedidos
-CREATE TABLE IF NOT EXISTS pedidos (
-  id_pedido INTEGER PRIMARY KEY,
-  cliente TEXT NOT NULL,
-  data_pedido TEXT NOT NULL,
-  id_produto INTEGER,
-  FOREIGN KEY (id_produto) REFERENCES produtos(id_produto)
-);
-
--- Inserção de pedidos
-INSERT INTO pedidos VALUES (1, 'João da Silva', '2025-06-01', 1);
-INSERT INTO pedidos VALUES (2, 'Maria Oliveira', '2025-06-05', 2);
-INSERT INTO pedidos VALUES (3, 'Carlos Santos', '2025-06-10', 3);
-````
-
 ---
 
 ## 🧪 Como Utilizar no VS Code
@@ -110,7 +72,7 @@ INSERT INTO pedidos VALUES (3, 'Carlos Santos', '2025-06-10', 3);
 
 ## 💡 Exemplos de Consultas
 
-```sql
+sql
 -- Ver todos os produtos
 SELECT * FROM produtos;
 
@@ -130,8 +92,3 @@ SELECT * FROM produtos WHERE estoque < 15;
 > SQLite Documentation: [https://sqlite.org/docs.html](https://sqlite.org/docs.html)
 
 > GitHub Docs: [https://docs.github.com/](https://docs.github.com/)
-
-```
-
-
-```
