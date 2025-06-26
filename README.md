@@ -1,4 +1,4 @@
-# ☕ Banco de Dados para Marcenaria & Cafeteria Artesanal
+# ☕ Cafeteria Artesanal
 
 Este projeto contém a modelagem e implementação de um banco de dados relacional utilizando **SQLite**, com foco em produtos e pedidos de cafés especiais artesanais. A ideia surgiu a partir da adaptação de um sistema web para uma marcenaria local que também comercializa cafés e itens especiais.
 
